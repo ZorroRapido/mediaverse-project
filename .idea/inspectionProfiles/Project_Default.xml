@@ -1,0 +1,76 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="4">
+            <item index="0" class="java.lang.String" itemvalue="width" />
+            <item index="1" class="java.lang.String" itemvalue="height" />
+            <item index="2" class="java.lang.String" itemvalue="helvetica" />
+            <item index="3" class="java.lang.String" itemvalue="{%" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myValues">
+        <value>
+          <list size="7">
+            <item index="0" class="java.lang.String" itemvalue="nobr" />
+            <item index="1" class="java.lang.String" itemvalue="noembed" />
+            <item index="2" class="java.lang.String" itemvalue="comment" />
+            <item index="3" class="java.lang.String" itemvalue="noscript" />
+            <item index="4" class="java.lang.String" itemvalue="embed" />
+            <item index="5" class="java.lang.String" itemvalue="script" />
+            <item index="6" class="java.lang.String" itemvalue="b" />
+          </list>
+        </value>
+      </option>
+      <option name="myCustomValuesEnabled" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyChainedComparisonsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoreConstantInTheMiddle" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="5">
+            <item index="0" class="java.lang.String" itemvalue="pylint" />
+            <item index="1" class="java.lang.String" itemvalue="pylint-django" />
+            <item index="2" class="java.lang.String" itemvalue="pycodestyle" />
+            <item index="3" class="java.lang.String" itemvalue="anybadge" />
+            <item index="4" class="java.lang.String" itemvalue="PyQt5" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N801" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="utils" />
+          <option value="vk_api" />
+          <option value="GasStation.main.*" />
+          <option value="ComplexNumbersClass.main.complex" />
+          <option value="StackClass.main.*" />
+          <option value="ComplexNumbersClass.complex_collection.*" />
+          <option value="ComplexNumbersClass.main.*" />
+          <option value="PlayerClass.main.*" />
+          <option value="TicketsClass.main.*" />
+          <option value="game" />
+          <option value="algorithm" />
+          <option value="PyQt5.QtWidgets.layout.addWidget" />
+          <option value="PyQt5.QtCore.thread.start" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

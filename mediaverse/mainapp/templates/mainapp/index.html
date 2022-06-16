@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+
+  <style>
+    .topics tr {
+    overflow: hidden;
+    height: 14px;
+    white-space: nowrap;
+    }
+  </style>
+
+  <header class="shadow p-1 bg-light text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <img class="bi me-2" width="58" height="60" src="{{media_url}}/images/logo.png">
+          <p class="pt-3 text-black me-5">MediaSpace</p>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="nav-link px-2 text-secondary">Главная</a></li>
+          <li><a href="#" class="nav-link px-2 text-black">Лента</a></li>
+          <li><a href="#" class="nav-link px-2 text-black">Жанры</a></li>
+          <li><a href="#" class="nav-link px-2 text-black">Авторы</a></li>
+        </ul>
+
+        <form action="{% url 'search_results' %}" method = "get" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          {% if query %}
+            <input value="{{query}}" name="search_line" type="search" class="form-control form-control-dark text-black" placeholder="Поиск книг" aria-label="Search">
+          {% else %}
+            <input name="search_line" type="search" class="form-control form-control-dark text-black" placeholder="Поиск книг" aria-label="Search">
+          {% endif %}
+
+        </form>
+
+
+        <div class="text-end">
+          <button type="button" class="btn btn-primary">Войти</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <body>
+  <div class="row row-cols-5 row-cols-lg-5 g-2 g-lg-3 p-3 mt-3 ms-3 me-3" style="height: 50px">
+    {% for item in books %}
+      <div class="col-sm-6" style="">
+        <div class="card" style="max-height: 50">
+          <div class="card-body">
+            <img src="{{media_url}}/{{item.image}}" class="rounded mx-auto d-block" width="170" height="260" border="1px">
+            <h5 class="card-title pt-1">{{item.title}}</h5>
+            <p class="card-text">{{item.author}}</p>
+            <a href="#" class="btn btn-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+  {% endfor %}
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
